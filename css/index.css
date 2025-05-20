@@ -1,0 +1,256 @@
+/* start main style */
+
+.main{
+  margin: 0 7%;
+  font-size: 1.4em;
+}
+/* introduction section */
+.intro-section {
+  text-align: center;
+  color: #000;
+  
+}
+
+.intro-img img {
+  width: 30%;
+  border-radius: 50%;
+  margin: 8px;
+  border: 5px solid #fff;
+}
+
+figcaption{
+  font-size: 0.7em;
+  text-align: center;
+}
+
+/* section header */
+.section-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+/* section header after pseudo element */
+.section-header::after {
+  content: "";
+  display: block;
+  width: 60%;
+  height: 2px;
+  background-color: #ec3078;
+  margin-top: 20px;
+}
+
+/* popular items section */
+.popular-items-content {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.popular-item {
+  font-size: 1.1em;
+  width: 65%;
+  margin: 10px 0;
+  background-color: #fff;
+}
+
+.popular-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.popular-item img {
+  width: 100%;
+  height: 200px;
+}
+
+.popular-item-text {
+  padding: 10px;
+  margin: 20px;
+}
+
+
+/* special products section */
+.special-products-content {
+  width: 80%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto auto auto;
+  grid-template-areas: 
+      "product-item-1 product-item-1" 
+      "product-item-2 product-item-2"
+      "product-item-3 product-item-4";
+  gap: 1em;
+  padding: 20px 0;
+}
+
+.item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.product-item-1 {
+  grid-area: product-item-1;
+}
+
+.product-item-2 {
+  grid-area: product-item-2;
+}
+
+.product-item-3 {
+  grid-area: product-item-3;
+}
+
+.product-item-4 {
+  grid-area: product-item-4;
+}
+
+.special-products-content img {
+  width: 100%;
+  height: 100%;
+  border: 5px solid #fff;
+}
+
+/* end main style */
+
+/* for tablets and Ipads */
+@media (min-width: 768px) {
+  main {
+      margin: 0 40px;
+  }
+
+  /* introduction section */
+  .intro-section {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: left;
+      margin: 0 20px 20px 20px;
+  }
+
+  .intro-img img {
+      width: 100%;
+  }
+
+  /* popular items section */
+  .popular-items-content {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 10px;
+  }
+
+  .popular-item {
+      width: 35%;
+  }
+
+  /* special products section */
+  .special-products-content {
+      display: grid;
+      justify-items: start;
+      grid-template-areas: 
+          "large large"
+          "medium medium"
+          "small1 small2";
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: auto auto auto;
+      gap: 10px;
+      margin: auto;
+  }
+
+  .product-item-1 {
+      grid-area: large;
+
+  }
+
+  .product-item-2 {
+      grid-area: medium;
+
+  }
+
+  .product-item-3 {
+      grid-area: small1;
+    
+  }
+
+  .product-item-4 {
+      grid-area: small2;
+    
+  }
+
+  .product-item-3 img
+  ,.product-item-4 img{
+    height: 250px;
+  }
+
+  .item {
+      width: 100%;   
+  }
+
+
+}
+
+/* For laptops */
+@media (min-width: 1024px) {
+  /* popular items section */
+  .popular-items-content {
+      display: flex;
+      justify-content: space-around;
+      flex-wrap: wrap;
+  }
+
+  .popular-item {
+      width: 25%;
+      margin: 30px 0;
+  }
+
+/* Special products section */
+.special-products-content {
+  display: grid;
+  grid-template-areas: 
+      "large large medium medium"
+      "large large medium medium"
+      "large large small1 small2"
+      "large large small1 small2";
+  grid-template-columns: 2fr 2fr 1fr;  /* Adjusted for better spacing */
+  grid-template-rows: minmax(100px, auto) minmax(100px, auto) minmax(100px, auto) minmax(100px, auto); /* Flexible row heights */
+  gap: 10px;
+  margin: auto;
+}
+
+.product-item-1 {
+  grid-area: large;
+  width: 100%;
+  height: 500px;
+}
+
+.product-item-2 {
+  grid-area: medium;
+  width: 100%;
+  height: 300px;
+}
+
+.product-item-3 {
+  grid-area: small1;
+  width: 100%;
+  height: 190px;
+}
+
+.product-item-4 {
+  grid-area: small2;
+  width: 100%;
+  height: 190px;
+}
+
+.item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;  /* Keep images proportional */
+}
+
+}
+

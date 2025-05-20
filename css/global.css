@@ -1,0 +1,185 @@
+/* defualt style for mobiles */
+@import url(https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&display=swap);
+
+/* start general style*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+  }
+
+  body{
+    font-family: "Caveat", cursive , sans-serif;
+    line-height: 1.6;
+    background-color: #f4eee6;
+    height: 100vh;
+    font-size: 16px;
+
+}
+
+h1,h2.h3,h4,h5,h6{
+    color: #000;
+}
+
+a{
+color: #fff;
+}
+
+ul {
+list-style: none;
+display: flex;
+justify-content: space-around;  
+gap: 20px;
+  }
+
+  p{
+    text-align: justify;
+  }
+
+main{
+    padding: 20px;
+
+}
+
+.colored-text{
+    color: #ec3078;
+}
+/* start general style*/
+
+
+/* start header style */
+.header{
+    background-color: #000;
+    color: #fff;
+
+}
+
+.navbar{
+    background-color: #000;
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.logo-contanier{
+    display: flex;    
+}
+
+.logo-contanier h1{
+    padding-left: 0.5em;
+}
+
+.logo-img{
+    width: 35px;
+    height: 35px;
+}
+.imgs-lights-container{
+    width: 100%;
+    text-align: center;
+}
+
+
+.imgs-lights-container img{
+    width: 220px;
+    height: auto;
+}
+
+.light-2,
+.light-3
+{
+display: none;
+}
+
+.header-content{
+    padding: 0 40px;
+    margin: 0 40px 30px;
+    text-align: center;
+    font-size: 1.5em;
+}
+
+.header-img{
+    text-align: center;
+}
+
+.header-img img{
+    max-width: 100%;
+/* end header style*/
+
+}
+
+/* start footer style*/
+footer {
+    background-color: #000;
+
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1em;
+    padding: 1em;
+}
+/* end footer style*/
+
+/* specifing this style for smalle phones*/
+@media (max-width: 480px) {
+    .navbar ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .popular-item {
+        width: 100%;
+    }
+}
+
+/* for tablets and Ipads */
+@media (min-width: 769px)  {
+
+    /* start header style*/
+    ul{
+        gap: 20px;
+    }
+
+    .navbar{
+        justify-content: space-between;
+        padding: 10px 20px;
+    }
+
+    .imgs-lights-container{
+        display: flex;
+        justify-content:center ;
+    }
+
+    .light-2
+    ,.light-3
+    {
+        display: inline;
+    }
+    /* end header style*/
+
+
+}
+
+
+/* for laptops */
+@media (min-width:1024px) {  
+
+    .navbar{
+      padding: 20px 70px ;
+    }
+
+    .header-content{
+        padding: 0 130px;
+        margin: 0 130px;
+    }
+    
+    footer{
+        flex-direction: row;
+        justify-content: space-evenly;
+        margin: 40px 0;
+    }
+
+}
+
